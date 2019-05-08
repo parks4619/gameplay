@@ -94,6 +94,8 @@ cscript temp1.vbs %prefix%/%filename%.zip %filename%.zip
 echo Extracting %filename%.zip... please standby...
 %~d0
 cd %~dp0
+
+
 > temp2.vbs ECHO Dim fileName, workingDir
 >> temp2.vbs ECHO fileName = WScript.Arguments(0)
 >> temp2.vbs ECHO workingDir = CreateObject("Scripting.FileSystemObject").GetAbsolutePathName(".")
@@ -109,3 +111,4 @@ del temp1.vbs
 del temp2.vbs
 del %filename%.zip
 echo Done.
+
